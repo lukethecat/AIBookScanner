@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 应用基本信息 -->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+
+    <!-- 权限请求 -->
+    <key>NSCameraUsageDescription</key>
+    <string>AIBookScanner需要使用相机来拍摄书籍页面进行扫描和处理</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>AIBookScanner需要访问相册来导入书籍图片进行处理</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>AIBookScanner需要保存处理后的书籍页面到相册</string>
+
+    <!-- 设备要求 -->
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>armv7</string>
+        <string>camera</string>
+    </array>
+
+    <!-- 支持的设备方向 -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <!-- 启动屏幕设置 -->
+    <key>UILaunchScreen</key>
+    <dict>
+        <key>UILaunchScreen</key>
+        <dict/>
+    </dict>
+
+    <!-- 状态栏样式 -->
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleDefault</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+
+    <!-- 隐私保护声明 -->
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+
+    <!-- Metal API支持 -->
+    <key>MTLDeviceDefaultSampleCount</key>
+    <integer>4</integer>
+
+    <!-- Core ML支持 -->
+    <key>MLModelAssets</key>
+    <array>
+        <!-- 后续添加Core ML模型资源 -->
+    </array>
+
+    <!-- 后台模式 -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>processing</string>
+    </array>
+</dict>
+</plist>
