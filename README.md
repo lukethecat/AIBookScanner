@@ -20,6 +20,7 @@
 - **Vision** - 计算机视觉框架
 - **Metal** - 高性能图形和计算
 - **Core Data** - 本地数据持久化
+- **Vision** - 高级页面检测
 - **Core Image** - 实时图像处理
 
 ## 📱 功能
@@ -27,14 +28,19 @@
 ### 核心功能
 - [x] 书籍页面拍摄
 - [x] 自动边缘检测
-- [x] 透视校正
-- [x] 图像增强
+- [x] 高级透视校正（多尺度检测）
+- [x] 智能图像增强（文字优化）
 - [x] 本地存储
+- [x] 多尺度页面检测算法
+- [x] 多尺度页面检测
 - [x] 隐私保护
+- [x] 智能页面评分系统
+- [x] 智能页面选择算法
 
 ### 高级功能
-- [ ] OCR文字识别
+- [ ] OCR文字识别（Vision框架）
 - [ ] 多页文档管理
+- [ ] 实时处理预览
 - [ ] PDF导出
 - [ ] iCloud同步
 - [ ] 批量处理
@@ -86,8 +92,10 @@ AIBookScanner/
 ### 核心服务
 
 - `ImageProcessor` - 图像处理管道
+- `BookPageDetector` - 高级页面检测
 - `CoreDataManager` - 数据存储管理
 - `CameraService` - 相机控制
+- 测试框架 - Python测试脚本
 
 ## 📄 许可证
 
@@ -111,5 +119,20 @@ AIBookScanner/
 - 符合ISO42001数据保护标准
 
 ---
+
+## 🧪 测试工具
+
+项目包含完整的测试框架：
+- Python测试脚本 (`test_detection.py`)
+- 边缘检测算法验证
+- 轮廓分析测试
+- 透视校正评估
+- 测试图像生成工具
+
+运行测试：
+```bash
+python test_detection.py --create-test  # 创建测试图像
+python test_detection.py --test-dir test_images  # 运行全面测试
+```
 
 **AIBookScanner** - 让书籍数字化变得简单而安全 📚✨
